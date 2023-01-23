@@ -1,15 +1,9 @@
 #include <stdio.h>
 #include <maya/MString.h>
 #include <maya/MFnPlugin.h>
-#include <maya/MPxCommand.h>
 #include <maya/MIOStream.h>
 
-class mayaPluginTemplate : public MPxCommand
-{
-    public:
-        MStatus doIt();
-        static void* creator();
-};
+#include "main.h"
 
 MStatus mayaPluginTemplate::doIt() {
     cout << "Plugin initialized" << endl;
